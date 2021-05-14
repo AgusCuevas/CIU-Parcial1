@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Parcial 1</title>
+        <style>
+            #logo{
+                background-color: green;
+            }
+            img{
+                width: 100px; 
+                height: 100px;
+            }
+            body{
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-color: lightgray;
+            }
+            label{
+                font-size: 200%;
+            }
+            input {
+                top: 50%;
+                border-radius: 15px;
+                background-color: rgb(224, 224, 224);
+                font-size: 200%;
+            }
+            form {
+                top: 50%;
+                left: 50%;
+                font-size: 200%;
+                transform: translate(-50%, -50%);
+                position: relative;
+                position: absolute;
+                background-color: white;
+            }
+            button{
+                font-size: 200%;
+                border-radius: 15px;
+                background-color: green;
+            }
+
+            .mostrar{
+                display: show;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="logo">
+            <img src="https://c0.klipartz.com/pngpicture/155/90/gratis-png-icono-de-serpiente-y-caliz-verde-y-blanco-facultad-de-farmacia-farmaceutico-universitario-silpakorn-farmaco-farmaceutico-farmacia.png">
+        </div>
+        <br>
+        <form id="form">
+            Usuario:<input type="number" name="usuario" placeholder="Ingrese usuario" id="usuario"> <br>
+            Contrasena:<input type="password" name="contrasena" placeholder="Ingrese Contrasena" id="constrasena"> <br>
+            <br>
+            <button onclick="enviarFormulario();"><a href="C:\Users\Usuario\Desktop\CIU\Parcial1\ParcialPaginaPrincipal.html">Siguiente</a></button>
+        </form>
+
+    <script>
+        var usuario = document.getElementById('usuario');
+        var constrasena = document.getElementById('constrasena');
+        function enviarFormulario(){
+            if(usuario.value.length == 0 || !isNaN(usuario)){
+                alert('No es un usuario valido');
+                return false;
+            }
+            if(constrasena.value.length < 4){
+                alert('Contrasena no valida');
+                return false;
+            }
+            else{
+                location.href = "C:\Users\Usuario\Desktop\CIU\Parcial1\ParcialPaginaPrincipal.html"
+            }
+        }
+    </script>
+    </body>
+</html>
